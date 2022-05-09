@@ -1,0 +1,215 @@
+{% extends "courses/base.html" %}
+{% load static %}
+{% block title %}<title>Home</title>{% endblock title %}
+{% block banner %}
+<div class="banner">
+    <div class="owl-four owl-carousel" itemprop="image">
+        <img src="{% static 'images/page-banner.jpg' %}" alt="Image of Bannner" style="max-height:100vh;opacity: .4;">
+    </div>
+    <div class="container" itemprop="description">
+        <h1><span style="color:rgb(0, 0, 0);">welcome to </span><span style="color:rgb(25, 118, 101);">Educatech</span></h1>
+        <h3 style="color:rgb(0, 0, 0); font-weight: 500;">Home of Trusted Content for Learners, Teachers and Parents</h3>
+    </div>
+    
+</div>
+{% endblock banner %}
+
+{% block content %}
+<div class="page-heading">
+    <div class="container">
+        <h2>popular courses</h2>
+    </div>
+</div>
+<!-- Popular courses End -->
+<div class="learn-courses">
+    <div class="container">
+        <div class="courses">
+            <div class="owl-one owl-carousel">
+                {% for course in courses %}
+                <div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
+                    <div class="img-wrap" itemprop="image"><img src="{% static 'images/course-pic.jpg' %}" alt="courses picture"></div>
+                        <a href="{{course.get_absolute_url}}" class="learn-desining-banner" itemprop="name">{{ course.course_name|title}} >>></a>
+                    <div class="box-body" itemprop="description">
+                        <p>{{course.course_desc|truncatechars:100}}</p>
+                        <section itemprop="time">
+                            <p><span>Duration:</span> 4 Years</p>
+                            <p><span>Class Time:</span> 6am-12am / 11am-5pm</p>
+                            <p><span>Fee:</span> 4,00,000</p>
+                        </section>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Learn courses End -->
+<section class="whyUs-section">
+    <div class="container">
+        <div class="featured-points">
+            <ul>
+                <li><i class="fas fa-book"></i> free books for students</li>
+                <li><i class="fas fa-money-check-alt"></i> affordable fees</li>
+                <li><i class="fas fa-chalkboard-teacher"></i> experienced teachers</li>
+            </ul>
+        </div>
+        <div class="whyus-wrap">
+            <h1>why us?</h1>
+            <p itemprop="description">Since 2002, EducaTech has provided literacy educators with access to an ever-growing collection of free educational materials. This includes hundreds of lesson plans, calendar resources, prints, and interactive tools. The site has consistently been one of the most information-rich resources on the internet. Every lesson plan on EducaTech has always been aligned to the classroom technology integration in the context of K-12 schools, showing how theory feeds into practice. EducaTech has always had a focus on professional development — helping educators recharge their teaching, learn new techniques and strategies, and connect with other technology professionals through both online and offline opportunities. EducaTech is able to offer all of this great content because of the technology experts who write and review for us and are committed to providing our users with the highest quality practices in classroom technology integration in the context of K-12 schools.</p>
+
+            <a href="#" class="read-more-btn">read more</a>
+        </div>
+    </div>
+</section>
+<!-- Closed WhyUs section -->
+<section class="page-heading">
+    <div class="container">
+        <h2>gallery</h2>
+    </div>
+</section>
+<section class="gallery-images-section" itemprop="image" itemscope itemtype=" http://schema.org/ImageGallery">
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img1.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img1.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img2.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img2.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img3.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img3.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img4.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img4.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img5.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img5.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img6.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img6.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img7.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img7.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img8.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img8.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img9.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img9.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img10.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img10.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img11.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img11.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+    <div class="gallery-img-wrap">
+        <a href="{% static 'images/gallery-img12.jpg' %}" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+            <img src="{% static 'images/gallery-img12.jpg' %}" alt="gallery-images">
+        </a>
+    </div>
+</section>
+<!-- End of gallery Images -->
+<section class="page-heading">
+    <div class="container">
+        <h2>upcomming events</h2>
+    </div>
+</section>
+<section class="events-section" itemprop="event" itemscope itemtype=" http://schema.org/Event">
+    <div class="container">
+        <div class="event-wrap">
+            <div class="img-wrap" itemprop="image">
+                <img src="{% static 'images/events.jpg' %}" alt="event images">
+            </div>
+            <div class="details">
+                <a href=""><h3 itemprop="name">Orientation Programme for new Students.</h3></a>
+                <p itemprop="description">Orientation Programme for new sffs Students. Orientation Programme for new sffs Students. Orientation Programme for new sffs Students.</p>
+
+                <h5 itemprop="startDate"><i class="far fa-clock"></i> Dec 30,2018 | 11am</h5>
+                <h5 itemprop="location"><i class="fas fa-map-marker-alt"></i> Hall 5, Students Center</h5>
+            </div>
+        </div>
+
+        <div class="event-wrap">
+            <div class="img-wrap" itemprop="image">
+                <img src="{% static 'images/events.jpg' %}" alt="event images">
+            </div>
+            <div class="details">
+                <a href=""><h3 itemprop="name">Orientation Programme for new Students.</h3></a>
+                <p itemprop="description">Orientation Programme for new sffs Students. Orientation Programme for new sffs Students. Orientation Programme for new sffs Students.</p>
+
+                <h5 itemprop="startDate"><i class="far fa-clock"></i> Dec 30,2018 | 11am</h5>
+                <h5 itemprop="location"><i class="fas fa-map-marker-alt"></i> Hall 5, Students Center</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Events section -->
+
+<section class="page-heading">
+    <div class="container">
+        <h2>latest news</h2>
+    </div>
+</section>
+<section class="latest-news">
+    <div class="container" itemprop="event" itemscope itemtype=" http://schema.org/Event">
+        <div class="owl-two owl-carousel">
+            <div class="news-wrap" itemprop="event">
+                <div class="news-img-wrap" itemprop="image">
+                    <img src="{% static 'images/latest-new-img.jpg' %}" alt="Latest News Images">
+                </div>
+                <div class="news-detail" itemprop="description">
+                    <a href=""><h1>Orientation Programme for new Students.</h1></a>
+                    <h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>
+
+                    <p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students.. Orientatin Programmes for new Students</p>
+                </div>
+            </div>
+
+            <div class="news-wrap" itemprop="event">
+                <div class="news-img-wrap" itemprop="image">
+                    <img src="{% static 'images/latest-new-img.jpg' %}" alt="Latest News Images">
+                </div>
+                <div class="news-detail" itemprop="description">
+                    <a href=""><h1>Orientation Programme for new Students.</h1></a>
+                    <h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>
+
+                    <p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students.. Orientatin Programmes for new Students</p>
+                </div>
+            </div>
+
+            <div class="news-wrap" itemprop="event">
+                <div class="news-img-wrap" itemprop="image">
+                    <img src="{% static 'images/latest-new-img.jpg' %}" alt="Latest News Images">
+                </div>
+                <div class="news-detail" itemprop="description">
+                    <a href=""><h1>Orientation Programme for new Students.</h1></a>
+                    <h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>
+
+                    <p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students.. Orientatin Programmes for new Students</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

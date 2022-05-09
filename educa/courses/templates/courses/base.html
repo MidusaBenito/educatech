@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	{% block title %}<title></title>{% endblock title %}
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/flexslider.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.rateyo.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/inner-page-style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+</head>
+<body>
+	<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+		<header class="site-header">
+			<div class="top-header">
+				<div class="container">
+					<div class="top-header-left">
+						<div class="top-header-block">
+							<a href="mailto:info@educatech.edu" itemprop="email"><i class="fas fa-envelope"></i> info@educatech.edu</a>
+						</div>
+						<div class="top-header-block">
+							<a href="tel:+1 0123456789" itemprop="telephone"><i class="fas fa-phone"></i> +1 0123456789</a>
+						</div>
+					</div>
+					<div class="top-header-right">
+						<div class="social-block">
+							<ul class="social-list">
+								<li><a href=""><i class="fab fa-viber"></i></a></li>
+								<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+								<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+								<li><a href=""><i class="fab fa-facebook-messenger"></i></a></li>
+								<li><a href=""><i class="fab fa-twitter"></i></a></li>
+								<li><a href=""><i class="fab fa-skype"></i></a></li>
+							</ul>
+						</div>
+						<div class="login-block">
+							<a href="">Login /</a>
+							<a href="">Register</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Top header Close -->
+			<div class="main-header">
+				<div class="container">
+					<div class="" itemprop="logo">
+						<a href="{% url 'home' %}"><h1 class="" style="padding-top:1.5rem; color:rgb(25, 118, 101);">EducaTech</h1></a>
+					</div>
+					<div class="nav-wrap">
+						<nav class="nav-desktop">
+							<ul class="menu-list">
+								<li><a href="{% url 'home' %}">Home</a></li>
+								<li class=""><a href="{% url 'course_listing' %}">Courses</a></li>
+
+								<li><a href="{% url 'about' %}">About</a></li>
+								
+							</ul>
+						</nav>
+						<div id="bar">
+							<i class="fas fa-bars"></i>
+						</div>
+						<div id="close">
+							<i class="fas fa-times"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header Close -->
+        {% block banner %}
+
+        {% endblock banner %}
+		{% block content %}
+        {% endblock content %}
+		
+		
+		<section class="query-section">
+			<div class="container">
+				<p>Any Queries? Ask us a question at<a href="tel:+1 0123456789"><i class="fas fa-phone"></i> +1 0123456789</a></p>
+			</div>
+		</section>
+		<!-- End of Query Section -->
+		<footer class="page-footer" itemprop="footer" itemscope itemtype="http://schema.org/WPFooter">
+			<div class="footer-first-section">
+				<div class="container">
+					<div class="box-wrap" itemprop="about">
+						<header>
+							<h1>about</h1>
+						</header>
+						<p>EducaTech is a great start for teachers, learners and parents who love technology.</p>
+
+						<h4><a href="tel:+1 0123456789"><i class="fas fa-phone"></i> +1 0123456789</a></h4>
+						<h4><a href="mailto:info@educatech.edu"><i class="fas fa-envelope"></i> info@educatech.edu</a></h4>
+						<h4><a href=""><i class="fas fa-map-marker-alt"></i>Washington, Washington, USA</a></h4>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>links</h1>
+						</header>
+						<ul>
+							
+							<li><a href="#">Courses</a></li>
+		
+						</ul>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>recent courses</h1>
+						</header>
+						<div class="recent-course-wrap">
+							<img src="{% static 'images/ui-ux.jpg' %}" alt="Ui/Ux Designing">
+							<a href=""><div class="course-name">
+								<h4>Supporting Open-ended Learning Environments</h4>
+								<p><span>$50</span> $40</p>
+							</div></a>
+						</div>
+						<div class="recent-course-wrap">
+							<img src="{% static 'images/ui-ux.jpg' %}" alt="Ui/Ux Designing">
+							<a href=""><div class="course-name">
+								<h4>Technology and Assessment</h4>
+								<p><span>$50</span> $40</p>
+							</div></a>
+						</div>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>quick contact</h1>
+						</header>
+						<section class="quick-contact">
+							<input type="email" name="email" placeholder="Your Email*">
+							<textarea placeholder="Type your message*"></textarea>
+							<button>send message</button>
+						</section>
+					</div>
+
+				</div>
+			</div>
+			<!-- End of box-Wrap -->
+			<div class="footer-second-section">
+				<div class="container">
+					<hr class="footer-line">
+					<ul class="social-list">
+						<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+						<li><a href=""><i class="fab fa-twitter"></i></a></li>
+						<li><a href=""><i class="fab fa-skype"></i></a></li>
+						<li><a href=""><i class="fab fa-youtube"></i></a></li>
+						<li><a href=""><i class="fab fa-instagram"></i></a></li>
+					</ul>
+					<hr class="footer-line">
+				</div>
+			</div>
+		
+		</footer>
+
+
+	</div>
+	<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/lightbox.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/all.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.rateyo.js' %}"></script>
+	<!-- <script type="text/javascript" src="js/jquery.mmenu.all.js"></script> -->
+	<!-- <script type="text/javascript" src="js/jquery.meanmenu.min.js"></script> -->
+	<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

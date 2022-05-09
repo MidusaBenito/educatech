@@ -1,0 +1,53 @@
+{% extends "courses/base.html" %}
+{% load static %}
+{% block title %}<title>About EducaTech</title>{% endblock title %}
+{% block content %}
+
+<section class="about-upper-section" itemprop="mainContentofPage">
+    <div class="container">
+        <article class="who-we-are">
+            <h2 class="top-heading">who we are</h2>
+            <h3 style="font-size: 2rem;">Vision</h3>
+            <p>Our vission is to provide a free, world‑class education for anyone, anywhere.
+                EducaTech empowers learners with materials and tools to hep them personalize their learning, create new ideas, find resources and access collections of educational content and build meaningful educational networks.
+
+            </p>
+
+        
+        </article>
+        <div class="our-story">
+            <h2 class="top-heading">our story</h2>
+            <ul>
+                <li><i class="fas fa-chalkboard-teacher"></i> <a href="#">60+ certified teachers</a></li>
+                <li><i class="fas fa-graduation-cap"></i> <a href="#">600+ students enrolled</a></li>
+                <li><i class="fas fa-book-open"></i> <a href="#">50+ courses completed</a></li>
+                <li><i class="fas fa-users"></i> <a href="#">10000+ foreign followers</a></li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="team-members" itemprop="contributor">
+    <div class="container">
+        <h2 class="top-heading">meet our team</h2>
+        <article class="developer-grid">
+            {% for instructor in instructors %}
+            <div class="developer-wrap">
+                <img src="{% static 'images/developer-img.jpg' %}" alt="developer images">
+                <h3>{{instructor.instructor_name}}</h3>
+                <p>{{instructor.course_teaching}}</p>
+                <ul>
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            {% endfor %}
+
+        </article>
+    </div>
+</section>
+
+{% endblock content%}
